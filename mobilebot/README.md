@@ -1,3 +1,9 @@
+## Mobilebot
+
+The maze map built in the final competition:
+
+<img src="https://github.com/ilnehc/ROB550_Fall2019/blob/master/mobilebot/maze_map.png" width="400">
+
 === Directories ===
 
 = bin/
