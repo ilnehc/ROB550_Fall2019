@@ -1,0 +1,37 @@
+=== Files ===
+
+NOTE: You won't need to edit anything in this folder.
+
+= optitrack/optitrack.cpp/hpp
+    - implementation of the interface for receiving data from the optitrack server
+    
+= optitrack/optitrack_driver.cpp
+    - implementation of optitrack_driver that receives optitrack information and transmits over serial xbee radio
+    - this is the "server" you will run on beaglebone connected to the optitrack machine
+      
+= optitrack/receive_serial_opti.cpp
+    - example program in C++ to read and decode xbee recieved optitrack messages
+
+= optitrack/xbee_receive.cpp
+    - example program in C to read and decode xbee recieved optitrack messages
+
+TO USE IN BALANCEBOT:
+
+You must add the following files to your balancebot/common folder:
+    xbee_packet.h
+    xbee_serial.h
+    xbee_serial.c
+    xbee_receive.c
+
+You must include xbee_packet.h in your balancebot code (ensure path is correct)
+
+You must include the following variables in your balancebot code:
+    xbee_packet_t xbeeMsg;
+    int XBEE_portID;
+
+You must include calls to XBEE_init() and XBEE_getData() in your balancebot code
+
+NOTE: Data from the motion capture will be in NED coordinates, Orientation is a quaternion
+        1. you will need to flip y
+        2. you will need to use rc_quaternion_to_tb_array() to get TB angles
+        3. you will need to flip the yaw angle you get after converting

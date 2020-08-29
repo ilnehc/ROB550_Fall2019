@@ -1,0 +1,7 @@
+First point of the line = (0,435)
+Second point of the line = (639,435)
+
+second line = (90,0)
+              (90,479)
+
+

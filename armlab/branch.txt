@@ -1,0 +1,10 @@
+branch
+
+FK test: 20190913
+FK done: 20190913
+motor XL: 20190918
+FK and IK func done: 20190922
+FK and IK func update: 20190923
+gripper add and FK update: 20190925
+click and grab still working: 20190929
+if out of space click again: 20190930
